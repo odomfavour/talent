@@ -74,6 +74,21 @@ body {
   font-size: 24px;
   font-weight: 500;
 }
+#error-message {
+  background: red;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  display: none;
+}
+
+#success-message {
+  background: green;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  display: none;
+}
 
 @media (max-width: 600px) {
   .upload-section {
