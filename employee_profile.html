@@ -54,7 +54,9 @@
                                     </div>
                                     <div class="modal-body">
                                         <div class="container">
-                                            <form action="">
+                                            <form action="" id="edit-profile">
+                                                <p id="error-message"></p>
+                                                <p id="success-message"></p>
 
                                                 <div class="row">
                                                     <div class="col-md-6">
@@ -62,7 +64,8 @@
                                                             <label for="first name" class="super-label">First
                                                                 name</label>
                                                             <input type="text" placeholder="Genesis"
-                                                                class="form-control" id="" aria-describedby="nameHelp">
+                                                                class="form-control" id="first-name"
+                                                                aria-describedby="nameHelp">
 
                                                         </div>
                                                     </div>
@@ -70,7 +73,8 @@
                                                         <div class="form-group">
                                                             <label for="lastname" class="super-label">Last name</label>
                                                             <input type="text" placeholder="Anosike"
-                                                                class="form-control" id="" aria-describedby="nameHelp">
+                                                                class="form-control" id="last-name"
+                                                                aria-describedby="nameHelp">
 
                                                         </div>
                                                     </div>
@@ -78,7 +82,8 @@
                                                         <div class="form-group">
                                                             <label for="email" class="super-label">Email</label>
                                                             <input type="email" placeholder="anosikegenesis@gmail.com"
-                                                                class="form-control" id="" aria-describedby="emailHelp">
+                                                                class="form-control" id="email"
+                                                                aria-describedby="emailHelp">
 
                                                         </div>
                                                     </div>
@@ -86,7 +91,7 @@
                                                         <div class="form-group">
                                                             <label for="location" class="super-label">Location</label>
                                                             <input type="text" placeholder="Ibadan, Nigeria"
-                                                                class="form-control" id=""
+                                                                class="form-control" id="location"
                                                                 aria-describedby="locationHelp">
                                                         </div>
                                                     </div>
@@ -100,25 +105,25 @@
                                                                 for="exampleFormControl">Track(s)</label>
                                                             <div class="form-group form-check">
                                                                 <input type="checkbox" class="form-check-input"
-                                                                    id="exampleCheck1">
+                                                                    id="Backend" value="Backend Development">
                                                                 <label class="form-check-label"
                                                                     for="exampleCheck1">Backend Development</label>
                                                             </div>
                                                             <div class="form-group form-check">
                                                                 <input type="checkbox" class="form-check-input"
-                                                                    id="exampleCheck1">
+                                                                    id="design" value="UI/UX Design">
                                                                 <label class="form-check-label"
                                                                     for="exampleCheck1">UI/UX Design</label>
                                                             </div>
                                                             <div class="form-group form-check">
                                                                 <input type="checkbox" class="form-check-input"
-                                                                    id="exampleCheck1">
+                                                                    id="frontend" value="frontend">
                                                                 <label class="form-check-label"
                                                                     for="exampleCheck1">Frontend Development</label>
                                                             </div>
                                                             <div class="form-group form-check">
                                                                 <input type="checkbox" class="form-check-input"
-                                                                    id="exampleCheck1">
+                                                                    id="mobile" value="Mobile Development">
                                                                 <label class="form-check-label"
                                                                     for="exampleCheck1">Mobile Development</label>
                                                             </div>
@@ -129,8 +134,8 @@
                                                                     class="super-label">Profile photo</label>
                                                                 <div class="file-box">
                                                                     <input type="file" class=""
-                                                                        placeholder="profile.png"
-                                                                        id="exampleFormControlFile1">
+                                                                        placeholder="profile.png" id="file"
+                                                                        onchange="Filevalidation()">
                                                                 </div>
                                                             </div>
                                                             <p>Recommended dimensions: 200 x 200px
@@ -140,8 +145,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="text-center">
-                                                    <button type="button" class="btn btn-lg btn-primary"
-                                                        data-toggle="modal" data-target="#staticBackdrop">Save
+                                                    <button type="submit" class="btn btn-lg btn-primary">Save
                                                         profile</button>
                                                 </div>
                                             </form>
